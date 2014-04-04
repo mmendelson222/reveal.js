@@ -1,0 +1,18 @@
+.reveal section img {
+    border: none;
+    background: none;
+}
+
+.hide, p#cornifycount {display:none}
+
+.floatleft {
+    float:left;
+}
+
+.floatright {
+    float:right;
+}
+
+.reveal li {
+    padding: 10px 10px 10px 10px;
+}

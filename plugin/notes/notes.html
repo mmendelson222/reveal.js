@@ -158,11 +158,11 @@
 		<div class="time">
 			<div class="clock">
 				<h2>Time</h2>
-				<span id="clock">0:00:00 AM</span>
+				<span id="clock">0:00</span>
 			</div>
 			<div class="elapsed">
 				<h2>Elapsed</h2>
-				<span id="hours">00</span><span id="minutes">:00</span><span id="seconds">:00</span>
+				<span id="hours">00</span><span id="minutes">:00</span>
 			</div>
 		</div>
 
@@ -215,14 +215,18 @@
 						timeEl.style.opacity = 1;
 
 						var diff, hours, minutes, seconds,
-							now = new Date();
+						now = new Date();
 
 						diff = now.getTime() - start.getTime();
 						hours = Math.floor( diff / ( 1000 * 60 * 60 ) );
 						minutes = Math.floor( ( diff / ( 1000 * 60 ) ) % 60 );
 						seconds = Math.floor( ( diff / 1000 ) % 60 );
 
-						clockEl.innerHTML = now.toLocaleTimeString();
+                        var h = now.getHours();
+                        var m = now.getMinutes();
+                        clockEl.innerHTML = '' + (h>12 ? h-12 : h) + ':' + (m<=9 ? '0' + m : m) + ' ' + (h>12 ? 'PM' : 'AM');
+
+						//clockEl.innerHTML = now.toLocaleTimeString();
 						hoursEl.innerHTML = zeroPadInteger( hours );
 						hoursEl.className = hours > 0 ? "" : "mute";
 						minutesEl.innerHTML = ":" + zeroPadInteger( minutes );
