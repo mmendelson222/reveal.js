@@ -69,29 +69,41 @@
                     </aside>
 				</section>
 
-				<section>
+				<section data-state="ready">
 					<h2>Agenda</h2>
-                    <ul>
-                        <li>
-                            Cordova - What is it, how does it work?
-                        </li>
-                        <li>
-                            Ionic - Why do I need it?  What good is it?
-                        </li>
-                        <li>
-                            Live demo
-                        </li>
-                    </ul>
+                    <table width="100%">
+                        <tr>
+                            <td width="250px"  style="vertical-align: middle; text-align: center;">
+                                <img src="img/logo/cordova_bot.png" width="160px" style="margin-top: 0;"/>
+                            </td>
+                            <td style="vertical-align: middle; text-align: left">
+                                <li>Cordova - What is it, how does it work?</li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: middle; text-align: center;">
+                                <img src="img/logo/ionic-circles.png" width="200px" style="margin-top: 0;"/>
+                            </td>
+                            <td style="vertical-align: middle; text-align: left">
+                                <li>Ionic - Why do I need it?  What good is it?</li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="200px">
+                                &nbsp;
+                            </td>
+                            <td style="vertical-align: middle; text-align: left">
+                                <li>Live demo</li>
+                            </td>
+                        </tr>
+                    </table>
+
 					<aside class="notes">
                         <ul>
-                        <li>
-                        First I'd like to ask YOU a couple of questions
-                        </li>
-                        <li> How many have created a NATIVE mobile app before - for example, an ios app for iphone, or a Java app for android?
-                        </li>
-                        <li>How many have actually USED cordova or phonegap?
-                        </li>
-                        <li>How many have used Ionic?  </li>
+                            <li>First I'd like to ask YOU a couple of questions</li>
+                            <li>How many have created a NATIVE mobile app before - for example, an ios app for iphone, or a Java app for android?</li>
+                            <li>How many have actually USED cordova or phonegap?</li>
+                            <li>How many have used Ionic?  </li>
                         </ul>
                     </aside>
 				</section>
@@ -167,49 +179,6 @@
                     </section>
 				</section>
                 <section>
-                    <h2>Cordova Fun Facts!</h2>
-                    <ul>
-                        <li>
-                            Your project will contain native code for all platforms!
-                        </li>
-                        <li>
-                            Phonegap is a plugin!
-                        </li>
-                        <li>
-                            On iOS, the action from cordova.exec() maps directly to functions in the native class
-                        </li>
-                        <li>
-                            On Android, JavaScript exec() calls Java class execute()
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h2>Cordova</h2>
-                    <h3>Project Structure</h3>
-                    <div width="100%" style="display: inline">
-                        <div class="floatleft" style="width: 500px">
-                            <img src="img/projectstructure.png" width="400px" />
-                        </div>
-                        <div class="floatleft" style="width: 400px; text-align: left">
-                            <ul>
-                                <li>
-                                    Native code under "platforms"
-                                </li>
-                                <li>
-                                    Phonegap is a plugin!
-                                </li>
-                                <li>
-                                    On iOS, the action from cordova.exec() maps directly to functions in the native class
-                                </li>
-                                <li>
-                                    On Android, JavaScript exec() calls Java class execute()
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </section>
-                <section>
                     <section>
                         <h2>Cordova</h2>
                         <h3>Plugin Architecture</h3>
@@ -218,13 +187,10 @@
                                 Plugins expose the native api of the mobile device.
                             </li>
                             <li>
-                                Phonegap is a plugin!
+                                Sometimes you'll need a plugin for a task that you might take for granted in other platforms.
                             </li>
                             <li>
-                                Sometimes you'll need a plugin for a task that you might take for granted in other platforms!
-                            </li>
-                            <li>
-                                Phonegap is a plugin!
+                                PhoneGap is a plugin!
                             </li>
                         </ul>
                     </section>
@@ -246,12 +212,37 @@ C:\dev\ctamobile>cordova plugins list
     'org.apache.cordova.inappbrowser',
     'org.apache.cordova.statusbar' ]
                         </code></pre>
-
                     </section>
                 </section>
-
+                <section>
+                    <h2>Cordova</h2>
+                    <h3>Project Structure</h3>
+                    <div class="floatleft" style="width: 450px; text-align: left">
+                        <img src="img/projectstructure.png" width="400px" />
+                    </div>
+                    <div class="floatleft" style="width: 500px; text-align: left">
+                        <ul>
+                            <li>
+                                Native code under "platforms"
+                            </li>
+                            <li>
+                                The "magic method" cordova.exec() maps to native functions, in the target framework.
+                            </li>
+                            <li>
+                                On Android, JavaScript exec() calls Java class execute()
+                            </li>
+                        </ul>
+                   </div>
+                </section>
+                <section>
+                    <h2>OK, so you're now a Cordova expert.</h2>
+                    <div style="padding: 20px 0 20px 0">
+                        <img src="img/consultant.png" width="650px"  />
+                    </div>
+                    <h2>What's next?</h2>
+                </section>
 				<section>
-					<h2>Point of View</h2>
+					<h2>Ionic</h2>
 					<p>
 						Press <strong>ESC</strong> to enter the slide overview.
 					</p>
@@ -536,6 +527,11 @@ function linkify( selector ) {
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
+
+            Reveal.addEventListener( 'ready', function( event ) {
+                console.log(event);
+                // event.currentSlide, event.indexh, event.indexv
+            } );
         </script>
 
 	</body>
