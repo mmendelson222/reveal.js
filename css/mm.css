@@ -16,3 +16,9 @@
 .reveal li {
     padding: 10px 10px 10px 10px;
 }
+
+.reveal section img {
+    border-color: rgb(238, 238, 238);
+    border-style: solid;
+    border-width: 4px;
+}
