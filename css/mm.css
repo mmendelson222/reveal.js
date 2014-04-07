@@ -16,9 +16,45 @@
 .reveal li {
     padding: 10px 10px 10px 10px;
 }
+/*
+.reveal ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
 
-.reveal section img {
+.reveal li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+.reveal li:before {
+    content: "•";
+    color: red;
+}
+*/
+
+.reveal section img.frame  {
     border-color: rgb(238, 238, 238);
     border-style: solid;
     border-width: 4px;
 }
+
+/*rotate start*/
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+img.rotateme
+{
+    -webkit-animation-name:             rotate;
+    -webkit-animation-duration:         60s;
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+}
+/*rotate end*/
