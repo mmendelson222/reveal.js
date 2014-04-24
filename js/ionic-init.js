@@ -5,6 +5,7 @@ Reveal.initialize({
     progress: true,
     history: true,
     center: true,
+    slidenumber:true,
 
     theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
     transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
@@ -26,5 +27,9 @@ Reveal.initialize({
 
 Reveal.addEventListener( 'ready', function( event ) {
     console.log(event);
-    // event.currentSlide, event.indexh, event.indexv
+} );
+
+Reveal.addEventListener( 'slidechanged', function( event ) {
+    //show the icon
+
 } );

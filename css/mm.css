@@ -16,6 +16,14 @@
 .reveal li {
     padding: 10px 10px 10px 10px;
 }
+
+.pagelogo
+{
+    position:fixed;
+    top:20px;
+    left:20px;
+}
+
 /*
 .reveal ul {
     list-style: none;

@@ -83,7 +83,10 @@
                                 <img src="img/logo/cordova_bot.png" width="160px" style="margin-top: 0;"/>
                             </td>
                             <td style="vertical-align: middle; text-align: left">
-                                <li>Cordova - What is it, how does it work?</li>
+                                <ul>
+                                    <li>Cordova - What is it, how does it work?</li>
+                                    <li>Cordova Hello World</li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
@@ -92,14 +95,7 @@
                             </td>
                             <td style="vertical-align: middle; text-align: left">
                                 <li>Ionic - Why do I need it?  What good is it?</li>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="200px">
-                                &nbsp;
-                            </td>
-                            <td style="vertical-align: middle; text-align: left">
-                                <li>Live demo</li>
+                                <li>Ionic Sample App Demo</li>
                             </td>
                         </tr>
                     </table>
@@ -115,6 +111,12 @@
                 <section>
                     <h2>Q: Cordova: Is it PhoneGap?</h2>
                     <h2>A: Sorta</h2>
+
+                    Let's make this slide "cordova basics" with a diagram...
+                    1. what is cordova
+                    2. is it phonegap
+                    3. architecture
+
                     <aside class="notes">
                         <ul>
                             <li>I'd like to get this one out of the way first.  When I first decided to write a multiplatform mobile app, I investigated the tools.</li>
@@ -189,15 +191,30 @@
                         <h3>Plugin Architecture</h3>
                         <ul>
                             <li>
-                                Plugins expose the native api of the mobile device.
+                                Cordova by itself does not do a lot.
                             </li>
                             <li>
-                                Sometimes you'll need a plugin for a task that you might take for granted in other platforms.
+                                Plugins expose the native api of the mobile device.
                             </li>
                             <li>
                                 PhoneGap is a plugin!
                             </li>
                         </ul>
+                    </section>
+                    <section>
+                        <h2>Cordova</h2>
+                        <h3>Plugin Examples</h3>
+                        <ul>
+                            <li>
+                                Find user's current location
+                            </li>
+                            <li>
+                                Open a link in the native browser (otherwise links will open in your application!)
+                            </li>
+                            <li>
+                                Plugins Registry: http://plugins.cordova.io/
+                            </li>
+                        </ul>+
                     </section>
                     <section>
                         <h2>Cordova</h2>
@@ -380,6 +397,100 @@ C:\dev\ctamobile>cordova plugins list
                             </pre>
                         </aside>
                     </section>
+                </section>
+                <section data-transition="fade" >
+                    <h2>Ionic Styles</h2>
+                    <div class="floatleft" style="width: 350px; text-align: left">
+                            <img src="img/scn_featured.png" width="100%" />
+                    </div>
+                    <div class="floatleft" style="width: 550px; text-align: left">
+                       &nbsp;
+                    </div>
+                </section>
+                <section data-transition="fade" >
+                    <h2>Ionic Styles</h2>
+                    <div class="floatleft" style="width: 350px; text-align: left">
+                        <img src="img/scn_featured_list.png" width="100%" />
+                    </div>
+                    <div class="floatleft" style="width: 550px; text-align: left">
+                        <ul>
+                            <li>
+                                Lists
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section data-transition="fade" >
+                    <h2>Ionic Styles</h2>
+                    <div class="floatleft" style="width: 350px; text-align: left">
+                        <img src="img/scn_featured_tabs.png" width="100%" />
+                    </div>
+                    <div class="floatleft" style="width: 550px; text-align: left">
+                        <ul>
+                            <li>
+                                Lists
+                            </li>
+                            <li>
+                                Tabs (each with own "history")
+                            </li>
+                        </ul>
+                    </div>
+
+                    <aside class="notes">
+                        <pre>
+                            If you navigate through views (ng-views) within a tab, a back arrow will appear.
+                            You can move between tabs and the framework will "know" your state on each.
+
+                            Now if we click on one of these list items.
+                        </pre>
+                    </aside>
+                </section>
+                <section data-transition="fade" >
+                    <h2>Ionic Styles</h2>
+                    <div class="floatleft" style="width: 350px; text-align: left">
+                        <img src="img/scn_detail_back.png" width="100%" />
+                    </div>
+                    <div class="floatleft" style="width: 550px; text-align: left">
+                        <ul>
+                            <li>
+                                Lists
+                            </li>
+                            <li>
+                                Tabs (each with own "history")
+                            </li>
+                            <li>
+                                Back behavior
+                            </li>
+                        </ul>
+                    </div>
+                    <aside class="notes">
+                       These are the sort of behaviors that, if you talk with a non-technical client and they say "I just want it to act like a smart phone", this is what they're talking about.
+                    </aside>
+                </section>
+                <section data-transition="fade" >
+                    <h2>Ionic Styles</h2>
+                    <div class="floatleft" style="width: 350px; text-align: left">
+                        <img src="img/scn_detail_button.png" width="100%" />
+                    </div>
+                    <div class="floatleft" style="width: 550px; text-align: left">
+                        <ul>
+                            <li>
+                                Lists
+                            </li>
+                            <li>
+                                Tabs (each with own "history")
+                            </li>
+                            <li>
+                                Back behavior
+                            </li>
+                            <li>
+                                Control styles
+                            </li>
+                        </ul>
+                    </div>
+                    <aside class="notes">
+                       Lots of Phone-y styles.  Also lots of sliders, switches etc.
+                    </aside>
                 </section>
                 <section>
                     <h2>Ionic Demo</h2>
