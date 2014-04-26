@@ -109,16 +109,25 @@
                     </aside>
 				</section>
                 <section>
-                    <h2>Q: Cordova: Is it PhoneGap?</h2>
-                    <h2>A: Sorta</h2>
+                    <h2>Cordova Basics</h2>
 
-                    Let's make this slide "cordova basics" with a diagram...
-                    1. what is cordova
-                    2. is it phonegap
-                    3. architecture
+                    <img src="img/cordova_arch.png" style="width: 650px"/>
 
                     <aside class="notes">
                         <ul>
+                            <li>runs on Webkit, on both Android and iOS.  Android 4.4 will run on chrome</li>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+                <section>
+                    <h2>Cordova: Is it PhoneGap?</h2>
+                    <h2>A: Sorta</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>runs on Webkit, on both Android and iOS.  Android 4.4 will run on chrome</li>
+                            <li></li>
                             <li>I'd like to get this one out of the way first.  When I first decided to write a multiplatform mobile app, I investigated the tools.</li>
                             <li>I found conflicting answers.</li>
                             <li>Part of the reason for this is that before Cordova was called Cordova, it was called "PhoneGap"!</li>
@@ -386,6 +395,9 @@ C:\dev\ctamobile>cordova plugins list
                             <li>
                                 Released beta in March.
                             </li>
+                            <li>
+                                MIT License (so it can be used commercially)
+                            </li>
                         </ul>
                         <aside class="notes">
                             <pre>
@@ -498,11 +510,11 @@ C:\dev\ctamobile>cordova plugins list
                         <pre>
                             create new ionic application using demo.
 
-                            >ionic start ctamobile2
-                            >ionic platform add android
-                            >cp c:\dev\ctamobile\app.js app.js
-                            >npm install express
-                            >node app
+                            > ionic start meetup tabs
+                            > ionic platform add android
+                            > cp c:\dev\ctamobile\app.js app.js
+                            > npm install express
+                            > node app
                         </pre>
                     </aside>
                 </section>
