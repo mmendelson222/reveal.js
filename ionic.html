@@ -48,11 +48,10 @@
 					<h1>Using Cordova and Ionic</h1>
 					<h3>To Create Multiplatform Mobile Apps</h3>
 					<div>
-						Me: <a href="http://intown.biz">Michael Mendelson</a>
-                            <br/>Blog: <a href="http://intown.biz">http://intown.biz</a>
+						<a href="http://intown.biz">Michael Mendelson</a>
 					</div>
 
-                    <div class="fragment">
+                    <div>
                             <img src="img/logo/angular-icon.png" width="150px"/>
                             <div>AngularJS DC</div>
                     </div>
@@ -60,10 +59,7 @@
                     <aside class="notes">
                         <ul>
                             <li>
-                                Get phone plugged in!!!!
-                            </li>
-                            <li>
-                                I'd like to introduce myself -
+                                Get phone plugged in, and set up ASM - use GIT BASH shell
                             </li>
                             <li>
                                 Today I'm going to talk about mobile development, and how you can use AngularJS to efficiently create multi-platform mobile applications.
@@ -74,7 +70,32 @@
                         </ul>
                     </aside>
 				</section>
-
+                <section>
+                    <h3>Michael Mendelson</h3>
+                    <table width="100%">
+                        <tr>
+                            <td width="50%"  style="vertical-align: middle; text-align: center;">
+                                <img src="img/logo/synteractive.png" style="background-color: #ffffff">
+                            </td>
+                            <td width="50%"  style="vertical-align: middle; text-align: left">
+                                <ul>
+                                    <li>Synteractive, Reston VA</li>
+                                    <li>Email: mmendelson
+                                        <br/>&nbsp;&nbsp;&nbsp;@synteractive.com<br/>&nbsp;&nbsp;&nbsp;@gmail.com</li>
+                                    <li>Blog: <a href="http://intown.biz">http://intown.biz</a></li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <aside class="notes">
+                        <ul>
+                            <li>I have worked for Synteractive (Reston, VA) for the past 5 years, and a big thank you goes out to my company for paying me to figure out puzzles all day. </li>
+                            <li>Also thanks to my friends Wyn and Jason, who are sitting through this presentation for the second time. </li>
+                            <li>This is my first time presenting this material, so I would love to hear your feedback.</li>
+                            <li>Blog - only useful if you're planning to implement what I'm talking about today.  Then it might be VERY useful</li>
+                        </ul>
+                    </aside>
+                </section>
 				<section data-state="ready">
 					<h2>Agenda</h2>
                     <table width="100%">
@@ -98,6 +119,14 @@
                                 <li>Ionic Sample App Demo</li>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td style="vertical-align: middle; text-align: left;">
+                                <li style="text-decoration: line-through; color: lightcoral">Environment Setup</li>
+                            </td>
+                        </tr>
                     </table>
 					<aside class="notes">
                         <ul>
@@ -109,13 +138,14 @@
                         </ul>
                     </aside>
 				</section>
+
                 <section>
                     <h2>Cordova Basics</h2>
                     <img src="img/cordova_arch.png" style="width: 650px"/>
                     <aside class="notes">
                         <ul>
                             <li>runs on Webkit, on both Android and iOS.  Android 4.4 will run on chrome</li>
-                            <li></li>
+                            <li>LAYOUT ENGINE (not browser)</li>
                         </ul>
                     </aside>
                 </section>
@@ -149,7 +179,7 @@
                                 Only code the business logic ONCE.
                             </li>
                             <li>
-                                Is it or isn't it?
+                                Hard to tell from native code.
                             </li>
                             <li class="hide">
                                 Runs in a built-in browser called WebKit (on iPhone) or Chromium (Android).
@@ -205,7 +235,13 @@
                                 Plugins expose the native api of the mobile device.
                             </li>
                             <li>
+                                Examples: current location, camera, notifications, splash screen, open link in native browser
+                            </li>
+                            <li>
                                 PhoneGap is a plugin!
+                            </li>
+                            <li>
+                                Plugins Registry: http://plugins.cordova.io/
                             </li>
                         </ul>
                         <aside class="notes">
@@ -213,21 +249,6 @@
                                 <li>Cordova gives you the development framework etc.  It does not give you an interface to native functions. </li>
                             </ul>
                         </aside>
-                    </section>
-                    <section>
-                        <h2>Cordova</h2>
-                        <h3>Plugin Examples</h3>
-                        <ul>
-                            <li>
-                                Find user's current location
-                            </li>
-                            <li>
-                                Open a link in the native browser (otherwise links will open in your application!)
-                            </li>
-                            <li>
-                                Plugins Registry: http://plugins.cordova.io/
-                            </li>
-                        </ul>+
                     </section>
                     <section>
                         <h2>Cordova</h2>
@@ -321,7 +342,7 @@ C:\dev\ctamobile>cordova plugins list
                     <h3>Cordova Hello World</h3>
                     <aside class="notes">
                         <pre>
-First run ASM
+Make sure ASM is running
 
 > cordova create hello com.example.hello "HelloWorld"
 > cd hello
