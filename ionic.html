@@ -16,7 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/night.css" id="theme">
-        <link rel="stylesheet" href="css/mm.css">
+        <link rel="stylesheet" href="css/ionic.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -90,7 +90,8 @@
                     <aside class="notes">
                         <ul>
                             <li>I have worked for Synteractive (Reston, VA) for the past 5 years, and a big thank you goes out to my company for paying me to figure out puzzles all day. </li>
-                            <li>Also thanks to my friends Wyn and Jason, who are sitting through this presentation for the second time. </li>
+                            <li>Just a plug - we are hiring. </li>
+                            <li>Thanks to my colleagues for coming down, and especially to those of you who are sitting through this for the second time. </li>
                             <li>This is my first time presenting this material, so I would love to hear your feedback.</li>
                             <li>Blog - only useful if you're planning to implement what I'm talking about today.  Then it might be VERY useful</li>
                         </ul>
@@ -138,37 +139,8 @@
                         </ul>
                     </aside>
 				</section>
-
                 <section>
-                    <h2>Cordova Basics</h2>
-                    <img src="img/cordova_arch.png" style="width: 650px"/>
-                    <aside class="notes">
-                        <ul>
-                            <li>runs on Webkit, on both Android and iOS.  Android 4.4 will run on chrome</li>
-                            <li>LAYOUT ENGINE (not browser)</li>
-                        </ul>
-                    </aside>
-                </section>
-                <section>
-                    <h2>Cordova: Is it PhoneGap?</h2>
-                    <h2>A: Sorta</h2>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>runs on Webkit, on both Android and iOS.  Android 4.4 will run on chrome</li>
-                            <li></li>
-                            <li>I'd like to get this one out of the way first.  When I first decided to write a multiplatform mobile app, I investigated the tools.</li>
-                            <li>I found conflicting answers.</li>
-                            <li>Part of the reason for this is that before Cordova was called Cordova, it was called "PhoneGap"!</li>
-                            <li>However, PhoneGap is built "on top of" Cordova, and offers some additional features, including the ability to do a "remote build" of iOS applications,
-                                an advantage for us Windows developers.</li>
-                            <li>Cordova is open source, and PhoneGap is an Adobe product.  At this time, Adobe distributes it for free.  </li>
-                            <li>So you'll hear a lot of people use them interchangeably, but this presentation is about Cordova without PhoneGap </li>
-                        </ul>
-                    </aside>
-                </section>
-				<section>
-					<section id="advantages">
+                    <section id="advantages">
                         <h2>Cordova</h2>
                         <h3>Advantages</h3>
                         <ul>
@@ -181,17 +153,14 @@
                             <li>
                                 Hard to tell from native code.
                             </li>
-                            <li class="hide">
-                                Runs in a built-in browser called WebKit (on iPhone) or Chromium (Android).
-                            </li>
                         </ul>
-                        <p style="margin-top: 60px" class="fragment">
+                        <p style="margin-top: 60px">
                             <span><img src="img/logo/apple.png" class="logo" width="150" height="150" style="margin-right: 15px" ></span>
                             <span><img src="img/logo/android.png" class="logo" width="150" height="150" style="margin-right: 15px" ></span>
                             <span><img src="img/logo/windows.png" class="logo" width="150" height="150" style="margin-right: 15px" ></span>
                             <span><img src="img/logo/firefoxos.png" class="logo" width="150" height="150" style="margin-right: 15px" ></span>
                         </p>
-                        <p class="fragment">
+                        <p class="hide">
                             <a onclick="cornify_add();return false;">Rainbows and unicorns?</a>
                         </p>
                         <aside class="notes">
@@ -206,10 +175,10 @@
                                 </li>
                             </ul>
                         </aside>
-					</section>
+                    </section>
                     <section>
                         <h2>Cordova</h2>
-                        <h3>Disadvantages</h3>
+                        <h3>Challenges</h3>
                         <ul>
                             <li>
                                 You still have to understand your platform.
@@ -222,7 +191,7 @@
                             </li>
                         </ul>
                     </section>
-				</section>
+                </section>
                 <section>
                     <section>
                         <h2>Cordova</h2>
@@ -253,23 +222,55 @@
                     <section>
                         <h2>Cordova</h2>
                         <h3>Install a Plugin</h3>
-                                <pre><code data-trim>
-C:\dev\ctamobile>cordova plugin add https://github.com/phonegap-build/PushPlugin.git
-    Fetching plugin "https://github.com/phonegap-build/PushPlugin.git" via git clone
-    Installing com.phonegap.plugins.PushPlugin (android)
-                                </code></pre>
+                                <pre>
+C:\dev\ctamobile><span style="color: red; font-weight: bold"> cordova plugin add https://github.com/phonegap-build/PushPlugin.git</span>
+Fetching plugin "https://github.com/phonegap-build/PushPlugin.git" via git clone
+Installing com.phonegap.plugins.PushPlugin (android)
+                               </pre>
                         <h3>List Your Plugins</h3>
-                        <pre><code data-trim>
-C:\dev\ctamobile>cordova plugins list
-    [ 'com.phonegap.plugins.PushPlugin',
-    'org.apache.cordova.console',
-    'org.apache.cordova.device',
-    'org.apache.cordova.geolocation',
-    'org.apache.cordova.inappbrowser',
-    'org.apache.cordova.splashscreen',
-    'org.apache.cordova.statusbar' ]
-                        </code></pre>
+                        <pre>
+C:\dev\ctamobile><span style="color: red; font-weight: bold"> cordova plugins list</span>
+[ 'com.phonegap.plugins.PushPlugin',
+'org.apache.cordova.console',
+'org.apache.cordova.device',
+'org.apache.cordova.geolocation',
+'org.apache.cordova.inappbrowser',
+'org.apache.cordova.splashscreen',
+'org.apache.cordova.statusbar' ]
+                        </pre>
+                        <aside class="notes">
+                            <ul>
+                                <li>This is also a good example of how to work with the cordova commands.  </li>
+                                <li>You can manage your plugins, add or remove support for different platforms, and much more.</li>
+                            </ul>
+                        </aside>
                     </section>
+                </section>
+                <section>
+                    <h2>Cordova Basics</h2>
+                    <img src="img/cordova_arch.png" style="width: 650px"/>
+                    <aside class="notes">
+                        <ul>
+                            <li>runs on Webkit, on both Android and iOS.  Android 4.4 will run on chrome</li>
+                            <li>LAYOUT ENGINE (not browser)</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section>
+                    <h2>Cordova: Is it PhoneGap?</h2>
+                    <h2>A: Sorta</h2>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>I'd like to get this one out of the way first.  When I first decided to write a multiplatform mobile app, I investigated the tools.</li>
+                            <li>I found conflicting answers.</li>
+                            <li>Part of the reason for this is that before Cordova was called Cordova, it was called "PhoneGap"!</li>
+                            <li>However, PhoneGap is built "on top of" Cordova, and offers some additional features, including the ability to do a "remote build" of iOS applications,
+                                an advantage for us Windows developers.</li>
+                            <li>Cordova is open source, and PhoneGap is an Adobe product.  At this time, Adobe distributes it for free.  </li>
+                            <li>So you'll hear a lot of people use them interchangeably, but this presentation is about Cordova without PhoneGap </li>
+                        </ul>
+                    </aside>
                 </section>
                 <section>
                     <h2>Cordova</h2>
@@ -283,14 +284,21 @@ C:\dev\ctamobile>cordova plugins list
                                 Native code under "platforms"
                             </li>
                             <li>
-                                The "magic method" cordova.exec() maps to native functions, in the target framework.
+                                HTML code under "www"
                             </li>
                             <li>
-                                On Android, JavaScript exec() calls Java class execute()
+                                all in all, pretty familiar.
                             </li>
                         </ul>
                    </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>blow through this one.  The point is that you are in familiar territory.</li>
+                            <li>Why?  HTML5!</li>
+                        </ul>
+                    </aside>
                 </section>
+
                 <section>
                     <section>
                         <h2>Running the Cordova App</h2>
@@ -299,21 +307,39 @@ C:\dev\ctamobile>cordova plugins list
                                 In the browser!
                             </li>
                             <li>
-                                Ripple (not the chrome extension)
+                                Ripple for Android (not the chrome extension)
                             </li>
                             <li>
-                                Attach your phone (Android)
+                                Emulators (for either platform)
                             </li>
                             <li>
-                                Add the id of your phone and Test Flight code to your app, sign up for Test Flight and set up an account,
-                                upload your app there, download it and you're all set!  (iPhone)
+                                Your phone.
+                                <ul>
+                                    <li>Android - usb cable</li>
+                                    <li>iPhone - Add the id of your phone and Test Flight code to your app, sign up for Test Flight and set up an account,
+                                        upload your app there, download it and you're all set! </li>
+                                </ul>
                             </li>
                         </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>advantages/disadvantages.  For example, android emulator is very slow....</li>
+                                <li>In the browser is very quick, but plugins don't work.</li>
+                                <li>Chrome Canary has tools</li>
+                                <li>After a lot of messing around, I use chrome (quick/layout) and the phone itself (the final authority).</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
                         <h2>A classic dialog box</h2>
                         <img src="img/ripple-message.png" width="650px" class="imgborder" />
+                        <aside class="notes">
+                            <ul>
+                                <li>this makes me think I'm in the wrong line of work.</li>
+                                <li>Some of us could get fired for this sort of thing.</li>
+                            </ul>
+                        </aside>
                     </section>
                     
                 </section>
@@ -325,7 +351,7 @@ C:\dev\ctamobile>cordova plugins list
                     <div class="floatleft" style="width: 470px">
                         <ul>
                             <li>
-                                Runs in Ant (so sorry, Grunt/Gulp fans)
+                                Runs in Ant
                             </li>
                             <li>
                                 Hooks (i.e. build event scripts) can be added.
@@ -335,6 +361,14 @@ C:\dev\ctamobile>cordova plugins list
                             </li>
                         </ul>
                     </div>
+                    <aside class="notes">
+                        <ul>
+                            <li>Ant is behind the scenes</li>
+                            <li>sorry, Grunt/Gulp fans - the good news is that I have not had to change this at all. But good for understanding</li>
+                            <li>Hooks - for injecting functionality into the build process.   Usually node.js is recommended (x-platform).  <br/>Can differentiate between build types.  examples: diff icons or terms of use</li>
+                            <li>Ant targets allow you to build, package, deploy</li>
+                        </ul>
+                    </aside>
                 </section>
 
                 <section>
@@ -342,14 +376,14 @@ C:\dev\ctamobile>cordova plugins list
                     <h3>Cordova Hello World</h3>
                     <aside class="notes">
                         <pre>
-Make sure ASM is running
+Make sure ASM is running (monitor)
 
-> cordova create hello com.example.hello "HelloWorld"
-> cd hello
+> cordova create meetup-hello com.example.hello "Meetup Cordova"
+> cd  meetup-hello
 > cordova platform add android
-> cordova build
-
 > cordova run android
+
+document.write(new Date());
                             </pre>
                     </aside>
                 </section>
@@ -553,7 +587,7 @@ show
                         <a href="http://intown.biz">Michael Mendelson</a>
                         <br/>Blog: <a href="http://intown.biz">http://intown.biz</a>
                     </div>
-                        <div style="width:100%; height: 300px;">
+                        <div style="display: none; width:100%; height: 300px;">
                             <div style="position: fixed; bottom: 0; left: 0;">
                             <a href="#">back</a>
                         </div>
